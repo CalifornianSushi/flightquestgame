@@ -1,0 +1,147 @@
+/* General page styling for the body, including font, background color, and text color */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header section: Flex layout to space the title and fuel score, with padding */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for the fuel score display, making the font larger and bold */
+.fuel-score {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Content wrapper for centering the quiz content with padding and handling overflow */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100% - 80px);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Quiz container styling with padding, background color, border radius, and box shadow for depth */
+.quiz-container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Container for the question text, adding margin to the bottom */
+.question-container {
+  margin-bottom: 20px;
+}
+
+/* Styling for the question text, making it slightly larger and bold */
+.question-text {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+/* Styling for the question image, ensuring it resizes well and stays within limits */
+.question-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* Container for the answer options, using flex for column layout with spacing between buttons */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Styling for each option button, with padding, background color, border-radius, and hover effect */
+.options-container button {
+  padding: 14px 24px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 30px;
+  background-color: #007aff;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for the options buttons, making them slightly larger when hovered */
+.options-container button:hover {
+  transform: scale(1.05);
+}
+
+/* Disabled button styling to prevent user interaction */
+.options-container button:disabled {
+  cursor: not-allowed;
+}
+
+/* Styling for the next question button, with padding, background color, and hover effect */
+.next-btn {
+  padding: 15px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto 20px auto;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for the next button, slightly enlarging on hover */
+.next-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the take flight button that appears at the end of the quiz */
+.take-flight-btn {
+  padding: 15px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  margin: 30px auto 0 auto;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for the take flight button, making it slightly larger when hovered */
+.take-flight-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for headings and paragraphs within the quiz container, centering text */
+.quiz-container h2,
+.quiz-container p {
+  text-align: center;
+}

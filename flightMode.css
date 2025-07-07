@@ -1,0 +1,195 @@
+/* Reset default browser styles and set a consistent font for the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Body: Apply a vertical sky-blue gradient background, prevent scrolling, and set up relative positioning for children */
+body {
+  background: linear-gradient(180deg, #87CEEB, #4682B4);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header: Full-width fixed bar at the top, flex layout for spacing, semi-transparent dark background for readability */
+header {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+/* Header Title: Slightly larger font for the page heading */
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Back Button: Styled as a blue, rounded button with white text */
+.back-button {
+  text-decoration: none;
+  background-color: #007aff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Game Canvas: Stretch canvas to fill viewport and block scrollbars */
+#gameCanvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* HUD: Overlay box for flight stats, semi-transparent black, rounded, and positioned at top-left */
+#hud {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+/* HUD Item: Add spacing between each stat row */
+.hud-item {
+  margin-bottom: 5px;
+}
+
+/* Emergency Message: Red, bold, centered overlay for critical alerts, hidden by default, with blinking animation */
+#emergency-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff0000;
+  font-size: 2rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: none;
+  z-index: 50;
+  animation: blink 1s infinite;
+}
+
+/* Blinking animation for the emergency message */
+@keyframes blink {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.5; 
+  }
+}
+
+/* Quiz Popup: Fullscreen overlay, dark background, centered content, hidden by default */
+.quiz-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* Quiz Content: White, rounded, shadowed box for questions and options, centered and responsive */
+.quiz-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Quiz Question: Larger font and spacing for the question text */
+.quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Quiz Option Buttons: Full-width, rounded, blue-on-hover, pointer cursor for interactivity */
+.quiz-options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Controls Popup Close Button: Styled to match the rest of the UI */
+#closeControlsBtn {
+  background-color: #007aff;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* HUD (Override): Make HUD background more opaque and use flex column layout with gap for spacing */
+#hud {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* HUD Label: Make the label part of each stat bold and add spacing */
+.hud-item span:first-child {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Emergency Message (Override): Use a red background and white centered text for higher urgency */
+#emergency-message {
+  background: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Home Button (for emergency and win states): Blue, rounded, prominent, with hover effect */
+#homeBtn,
+#homeBtnWin {
+  background-color: #007aff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Home Button Hover: Darker blue on hover for feedback */
+#homeBtn:hover,
+#homeBtnWin:hover {
+  background-color: #005bb5;
+}

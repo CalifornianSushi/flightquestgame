@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Link to the external CSS file to apply styles to the page -->
+    <link rel="stylesheet" href="viewAircraft.css">
+    <title>View Aircraft</title>
+  </head>
+  
+  <body>
+    <!-- Header section with the back button and title -->
+    <header>
+      <div class="header-bar">
+        <!-- Button that redirects the user to the homepage -->
+        <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+        
+        <!-- Page heading indicating this is the Aircraft Gallery -->
+        <h1>Aircraft Gallery</h1>
+
+        <!-- Unit toggle container for switching between metric and imperial units -->
+        <div class="unit-toggle-container" style="display: flex; align-items: center;">
+          <!-- Label for the unit toggle button, indicating the current unit system (Metric) -->
+          <span class="unit-label">Units - Metric:</span>
+          
+          <!-- Custom slider switch for toggling units -->
+          <label class="switch">
+            <input type="checkbox" id="unitToggle" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- This div will hold the dynamically generated aircraft cards -->
+    <div class="aircraft-grid"></div>
+    
+    <!-- Script tag to link to the JavaScript file that handles dynamic content generation and interactions -->
+    <script src="viewAircraft.js"></script>
+  </body>
+</html>

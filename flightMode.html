@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Mode - Aircraft Adventure</title>
+    <!-- Link to the external CSS file that styles the page -->
+    <link rel="stylesheet" href="flightMode.css">
+  </head>
+
+  <body>
+    <!-- Header section with the page title and a back button -->
+    <header>
+      <h1>Flight Mode</h1>
+      <!-- Back button that links to quizMode.html, enabling users to return to the quiz mode -->
+      <a href="quizMode.html" id="backBtn" class="back-button">Back</a>
+    </header>
+
+    <!-- Canvas element where the game is rendered -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Heads-Up Display (HUD) showing the flight stats -->
+    <div id="hud">
+      <!-- Fuel status display -->
+      <div class="hud-item">
+        <span>Fuel:</span> <span id="fuel-display">0%</span>
+      </div>
+      <!-- Airspeed display -->
+      <div class="hud-item">
+        <span>Airspeed:</span> <span id="airspeed-display">0</span> km/h
+      </div>
+      <!-- Direction display -->
+      <div class="hud-item">
+        <span>Direction to Head:</span> <span id="direction-display">0°</span>
+      </div>
+      <!-- Distance to destination display -->
+      <div class="hud-item">
+        <span>Distance:</span> <span id="distance-display">0 km</span>
+      </div>
+    </div>
+
+    <!-- Popup for displaying quiz questions -->
+    <div id="quizPopup" class="quiz-popup">
+      <div class="quiz-content">
+        <!-- Display the quiz question here -->
+        <div id="quizQuestion" class="quiz-question"></div>
+        <!-- Display the quiz options here -->
+        <div id="quizOptions" class="quiz-options"></div>
+      </div>
+    </div>
+
+    <!-- Emergency message that will appear when fuel runs out -->
+    <div id="emergency-message">EMERGENCY: FUEL DEPLETED!</div>
+    
+    <!-- Link to the JavaScript file that handles the game logic -->
+    <script src="flightMode.js"></script>
+  </body>
+</html>

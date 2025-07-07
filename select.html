@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+	<!-- Link to the external CSS file to apply styles to the page -->
+    <link rel="stylesheet" href="select.css">
+    <title>Select Aircraft</title>
+  </head>
+  
+  <body>
+    <!-- Header section with a back button and page title -->
+    <div class="header">
+      <!-- Button that redirects the user back to the main page when clicked -->
+      <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+      <!-- Main heading for the page, instructing the user to pick two aircraft -->
+      <h1 style="text-align: center; font-size: 32px;">Pick 2 Aircraft to Learn</h1>
+      <!-- Link wrapping the next button, which will move to the next page -->
+      <a href="learnMode.html" id="nextLink">
+        <!-- Button to navigate to the next page -->
+        <button id="nextBtn" class="next-btn">Next</button>
+      </a>
+    </div>
+
+    <!-- This div will hold all the dynamically generated aircraft cards -->
+    <div class="aircraft-grid"></div>
+
+    <!-- Link to external JavaScript file that handles dynamic content and interactions -->
+    <script src="select.js"></script>
+  </body>
+</html>

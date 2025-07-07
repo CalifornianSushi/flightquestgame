@@ -1,0 +1,88 @@
+/* Basic styles for the body, including font, background, and text color */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+/* Header styling, centering the title and adding bottom margin */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Aircraft detail section styling, with border, padding, and box-shadow for depth */
+.aircraft-detail {
+  max-width: 750px;
+  margin: 0 auto;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Image styling within the aircraft detail section */
+.aircraft-detail img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+/* Title styling for aircraft details */
+.aircraft-detail h2 {
+  font-size: 2em;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Styling for the list of facts, with left alignment and custom icons */
+.aircraft-detail ul {
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* Custom icon added before each list item */
+.aircraft-detail ul li::before {
+  content: "✈️ ";
+  margin-right: 8px;
+}
+
+/* Navigation section styling, with centered buttons and spacing */
+.navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button styling for the navigation buttons, with padding, font size, and hover effects */
+.navigation button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: #007AFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Disabled button styling with a grey background and no hover effect */
+.navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hover effect for active buttons */
+.navigation button:hover:not(:disabled) {
+  background-color: #005bb5;
+}

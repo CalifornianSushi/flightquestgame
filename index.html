@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link to the external stylesheet (styles.css) for page styling -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Aircraft Adventure Game</title>
+  </head>
+
+  <body>
+    <!-- Hero section that introduces the game with a background image and call-to-action buttons -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <!-- Main title for the hero section -->
+        <h1>Aircraft Adventure</h1>
+        <!-- Tagline to describe the purpose of the game -->
+        <p>Test your aviation knowledge & take flight.</p>
+        <!-- Call-to-action button to start the game -->
+        <a href="select.html" class="cta-button">Start Game</a>
+        <!-- Call-to-action button to view available aircraft -->
+        <a href="viewAircraft.html" class="cta-button">View Aircraft</a>
+      </div>
+
+      <!-- Scroll indicator that prompts users to explore more content -->
+      <div class="scroll-indicator">
+        <span class="arrow">&#x2193;</span> <span class="learn-more">Learn More</span>
+      </div>
+    </section>
+
+    <!-- About section providing an overview of the game -->
+    <section id="about" class="about-section">
+      <h2>About the Game</h2>
+      <!-- Descriptive paragraphs explaining the game mechanics and objective -->
+      <p class="about-text">Aircraft Adventure is an interactive quiz-based flight simulation game that challenges your aviation skills and knowledge.</p>
+      <p class="about-text">Answer aircraft-related questions to gain fuel, navigate through randomized challenges, and experience realistic aviation scenarios.</p>
+      
+      <!-- Features section listing the key game features -->
+      <div class="features">
+        <div class="feature">
+          <!-- Individual feature about interactive flight controls -->
+          <h3>✈️ Interactive Flight</h3>
+          <p>Control aircraft movement, manage fuel, and tackle in-flight emergencies.</p>
+        </div>
+
+        <div class="feature">
+          <!-- Feature about quiz-based learning to improve aviation knowledge -->
+          <h3>🧠 Quiz-Based Learning</h3>
+          <p>Test your knowledge of aircraft models, manufacturers, and aviation facts.</p>
+        </div>
+
+        <div class="feature">
+          <!-- Feature about experiencing real-world aviation scenarios -->
+          <h3>🌍 Real-World Scenarios</h3>
+          <p>Face emergency landings, turbulence, and critical decision-making challenges.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works section describing the game steps -->
+    <section id="how-it-works" class="how-it-works-section">
+      <div class="container">
+
+        <!-- Step buttons that allow users to navigate through the steps -->
+        <div class="steps-buttons">
+          <button class="step-button active" data-step="1">1</button>
+          <button class="step-button" data-step="2">2</button>
+          <button class="step-button" data-step="3">3</button>
+          <button class="step-button" data-step="4">4</button>
+        </div>
+
+        <!-- Step content that updates based on the selected step -->
+        <div class="step-content">
+          <!-- Title and description for Step 1 -->
+          <h2 id="step-header">Step 1: Choose Your Aircraft</h2>
+          <p id="step-description">
+            Begin your adventure by selecting your preferred
+            aircraft from a detailed database that includes
+            models from Boeing and Airbus. In this step, you
+            explore comprehensive information on each aircraft’s
+            specifications, design, and performance
+            characteristics. This selection not only personalizes
+            your experience but also sets the foundation for your
+            learning journey by aligning the game’s challenges with
+            the unique traits of your chosen aircraft. Aircraft
+            types include B737, B747, B757, B767, B777, B787, A320,
+            A321, A330, A340, A350, A380
+          </p>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- Testimonials section with player reviews of the game -->
+    <section id="testimonials" class="testimonials">
+      <h2>What Players Say</h2>
+
+      <div class="testimonial-container">
+        <!-- Individual testimonial box with player feedback -->
+        <div class="testimonial">
+          <p>"An exciting mix of quiz and simulation that truly puts you in the pilot's seat."</p>
+          <span>- Alex</span>
+        </div>
+
+        <div class="testimonial">
+          <p>"I learned so much about aviation while having a blast. Highly recommended!"</p>
+          <span>- Jamie</span>
+        </div>
+
+        <div class="testimonial">
+          <p>"The realistic scenarios and engaging gameplay kept me playing for hours."</p>
+          <span>- Sam</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back-to-top button that helps users quickly return to the top of the page -->
+    <a href="#home" class="back-to-top" id="back-to-top">&#8593;</a>
+
+    <!-- External script to handle interactions such as scroll behavior and step navigation -->
+    <script src="script.js"></script>
+  </body>
+</html>

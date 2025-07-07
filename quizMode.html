@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Aircraft Adventure Quiz</title>
+    <!-- Link to the external CSS file to apply styles to the page -->
+    <link rel="stylesheet" href="quizMode.css">
+  </head>
+
+  <body>
+    <!-- Header section displaying the title and current fuel score -->
+    <header>
+      <h1>Aircraft Adventure Quiz</h1>
+      <!-- Fuel score display: Shows the current fuel score of the user -->
+      <div id="fuelScore" class="fuel-score">Fuel: 0</div>
+    </header>
+
+    <!-- Main content wrapper that holds the quiz container -->
+    <main class="content-wrapper">
+      <div id="quizContainer" class="quiz-container">
+        
+        <!-- Container for the current quiz question and answer options -->
+        <div id="questionContainer" class="question-container">
+          <!-- Text for the question -->
+          <div id="questionText" class="question-text"></div>
+          <!-- Image related to the question (hidden by default if not available) -->
+          <img id="questionImage" class="question-image" src="" alt="" style="display: none;">
+          <!-- Options container that will hold the answer buttons -->
+          <div id="optionsContainer" class="options-container"></div>
+        </div>
+
+        <!-- Button to move to the next question, hidden until an answer is selected -->
+        <button id="nextBtn" class="next-btn" style="display: none;">Next Question</button>
+        
+      </div>
+    </main>
+
+    <!-- Link to the JavaScript file that contains the logic for the quiz -->
+    <script src="quizMode.js"></script>
+  </body>
+</html>

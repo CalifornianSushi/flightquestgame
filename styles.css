@@ -1,0 +1,318 @@
+/* General reset for all elements, setting margin and padding to zero and defining box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling: sets font, background color, text color, and disables horizontal overflow */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Styles for links, removing underlines and inheriting the text color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero section styles, full-screen height with gradient background and center-aligned text */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #d0f0fd, #a0e1fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styling for the content inside the hero section, applying padding and fade-in animation */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  padding: 0 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation for elements in the hero section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Large header text styling for the hero section */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Styling for the paragraph text in the hero section */
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Call to action buttons styling, including padding, font size, background color, and hover effects */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 15px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+}
+
+/* Hover effect for the call to action buttons, darkening the background and scaling the button */
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* General section styling, adding padding to separate sections */
+section {
+  padding: 100px 20px;
+}
+
+/* About section styling, including background color, text color, and centering content */
+.about-section { 
+  background: #f9f9f9;
+  color: #001f3f; 
+  width: 100%; 
+  padding: 100px 20px; 
+  text-align: center; 
+}
+
+/* Header styling for the about section */
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text styling for the about section */
+.about-text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Feature section container that arranges items in a flexible row */
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual feature box styling with padding, background color, border-radius, and hover effects */
+.feature {
+  flex: 1;
+  min-width: 250px;
+  background: #e6f2ff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Header styling inside each feature box */
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling inside each feature box */
+.feature p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Hover effect for feature boxes, lifting the element and adding shadow */
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the testimonials section, with background color */
+.testimonials {
+  background: #f9f9f9;
+}
+
+/* Header for the testimonials section */
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Container for individual testimonials, arranged in a flex row */
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual testimonial box styling, with padding, background, and shadow effects */
+.testimonial {
+  background: #e6f2ff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for testimonial boxes, slightly enlarging them */
+.testimonial:hover {
+  transform: scale(1.02);
+}
+
+/* Styling for the text inside each testimonial */
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Styling for the name of the testimonial giver */
+.testimonial span {
+  font-weight: 600;
+}
+
+/* Styling for the "Back to Top" button, positioned at the bottom right of the screen */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+/* When the back-to-top button should be visible after scrolling down */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect for the back-to-top button */
+.back-to-top:hover {
+  background: #0056b3;
+}
+
+/* Scroll indicator styling, positioned at the bottom of the hero section */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #000;
+  animation: bounce 2s infinite;
+}
+
+/* Styling for the "Learn More" text next to the arrow in the scroll indicator */
+.scroll-indicator .learn-more {
+  font-size: 1rem;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Bouncing animation for the scroll indicator */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Styling for the "How It Works" section with a clean background */
+.how-it-works-section {
+  background: #fff;
+  padding: 100px 20px;
+}
+
+/* Container for the steps inside the How It Works section */
+.how-it-works-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Flex container for the step buttons */
+.how-it-works-section .steps-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the step buttons, using circles with color transitions */
+.how-it-works-section .step-button {
+  background: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Active step button styling with different background and text color */
+.how-it-works-section .step-button.active {
+  background: #007BFF;
+  color: #fff;
+}
+
+/* Styling for the content next to the step buttons */
+.how-it-works-section .step-content {
+  flex: 1;
+}
+
+/* Styling for the step header inside the content area */
+.how-it-works-section .step-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Styling for the step description text */
+.how-it-works-section .step-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
